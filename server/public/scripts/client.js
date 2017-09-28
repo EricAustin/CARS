@@ -6,28 +6,28 @@ myApp.config(function($routeProvider, $locationProvider) {
   console.log('myApp -- config')
   $routeProvider
     .when('/home', {
-      templateUrl: '/views/templates/home.html',
+      templateUrl: '/views/templates/login.html',
       controller: 'LoginController as lc',
     })
     .when('/register', {
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController as lc'
     })
-    .when('/user', {
-      templateUrl: '/views/templates/user.html',
-      controller: 'UserController as uc',
+    .when('/admin', {
+      templateUrl: '/views/templates/admin.landing.html',
+      controller: 'AdminController as uc',
       resolve: {
-        getuser : function(UserService){
-          return UserService.getuser();
+        getuser : function(AdminService){
+          return AdminService.getuser();
         }
       }
     })
-    .when('/info', {
-      templateUrl: '/views/templates/info.html',
-      controller: 'InfoController',
+    .when('/mechanic', {
+      templateUrl: '/views/templates/mechanic.landing.html',
+      controller: 'MechanicController',
       resolve: {
-        getuser : function(UserService){
-          return UserService.getuser();
+        getuser : function(AdminService){
+          return AdminService.getuser();
         }
       }
     })

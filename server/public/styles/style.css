@@ -1,109 +1,109 @@
-body{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 14px;
-  background-color: #726F6F;
-  background-attachment: fixed;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #726F6F;
+    background-attachment: fixed;
 }
-main{
-   background-color: #726F6F;
-  background-attachment: fixed; 
+
+main {
+    background-color: #726F6F;
+    background-attachment: fixed;
 }
 
 .carsImg {
-  width: 300px;
-  height: 240px;
-  padding: 0;
-  float: left;
+    width: 300px;
+    height: 240px;
+    padding: 0;
+    float: left;
 }
 
 .instructions .container h1 {
-  font-size: 32px;
-  font-weight: 600;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .instructions {
- padding-top: 20px;
-  color: #DDDDDD;
-  padding: 15px;
+    padding-top: 20px;
+    color: #DDDDDD;
+    padding: 15px;
 }
 
 #entryForm {
-  margin-top: 14px;
+    margin-top: 14px;
 }
 
 #container {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
-.container p{
-  margin-top : 14px;
+.container p {
+    margin-top: 14px;
 }
 
 .message {
-  padding: 10px 0;
+    padding: 10px 0;
 }
 
 .message p {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .message:nth-child(odd) {
-   background-color: #eeeeee;
+    background-color: #eeeeee;
 }
 
 .message:nth-child(even) {
-  background-color: #f8f8f8;
+    background-color: #f8f8f8;
 }
 
-.btn-danger{
-  margin-left: 10px;
+.btn-danger {
+    margin-left: 10px;
 }
 
 .navbar {
-  background-color: #333333;
-  width: 100%;
-  border-radius: 0px;
-  color: #FFFFFF;
+    background-color: #333333;
+    width: 100%;
+    border-radius: 0px;
+    color: #FFFFFF;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 li {
-  float: left;
+    float: left;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+
 
 /* Change the link color to #111 (black) on hover */
+
 li a:hover {
-  text-decoration: underline;
-  color: #eee;
+    text-decoration: underline;
+    color: #eee;
 }
 
-header, footer {
-
+header,
+footer {
     /* padding: 1em; */
-
     padding: 8px;
-
     color: white;
     background-color: maroon;
     clear: left;
     text-align: center;
-
 }
 
 .landingpagelinks {
@@ -116,101 +116,105 @@ header, footer {
 
 .infocontainer {
     background-color: maroon;
-    background: linear-gradient(maroon,maroon,maroon, #726F6F);
+    background: linear-gradient(maroon, maroon, maroon, #726F6F);
     color: white;
-
     margin: 20px 0 20px 0;
     padding: 20px;
     border-radius: 5px;
-
-
     font-size: 15px;
     margin: 8px 8px 8px 8px;
     padding: 15px;
-
 }
 
 .listPush {
-  padding: 0 0 0 20px;
+    padding: 0 0 0 20px;
 }
 
 .listPushEnd {
-  padding: 0 0 0 20px;
+    padding: 0 0 0 20px;
 }
 
-.rqst{
- /* position: relative; */
- margin: 10px 10px 10px 10px;
- /* border: 2px dashed black; */
- padding: 8px 8px 8px 8px;
- height: 30%;
- width: 50%;
- background-color: lightgray;
+.rqst {
+    /* position: relative; */
+    margin: 10px 10px 10px 10px;
+    /* border: 2px dashed black; */
+    padding: 8px 8px 8px 8px;
+    height: 30%;
+    width: 50%;
+    background-color: lightgray;
 }
 
-.expanded_request{
- /* margin: 10px 10px 10px 10px; */
- padding: 8px 8px 0px 8px;
- /* border: 2px solid black; */
- width: 50%;
- background-color: lightgray;
-}
-.nrqst{
-  margin: 10px 10px 10px 10px;
-  border: 2px dashed black;
-  height: 30px;
-  width: 250px;
-  background-color: lightblue;
-}
-.nrqstform{
-   margin: 10px 10px 10px 10px;
-  border: 2px dashed black;
-  width: 700px;
-  background-color: lightblue; 
+.expanded_request {
+    /* margin: 10px 10px 10px 10px; */
+    padding: 8px 8px 0px 8px;
+    /* border: 2px solid black; */
+    width: 50%;
+    background-color: lightgray;
 }
 
-.ready{
-  background-color: greenyellow;
+.nrqst {
+    margin: 10px 10px 10px 10px;
+    border: 2px dashed black;
+    height: 30px;
+    width: 250px;
+    background-color: lightblue;
 }
 
-.in_progress{
-  background-color: lightcoral;
+.nrqstform {
+    margin: 10px 10px 10px 10px;
+    border: 2px dashed black;
+    width: 700px;
+    background-color: lightblue;
 }
 
-.serviced{
-  background-color: lightskyblue;
+.ready {
+    background-color: greenyellow;
 }
 
-
-.lead{
-  margin-top: -20px;
-  font-size: 36px;
-  color: whitesmoke;
+.in_progress {
+    background-color: lightcoral;
 }
 
-#logo img{
-  border-width: 2px;
-  border-color: white;
-  height: 100px;
-  width: auto;
-  object-fit: contain;
+.serviced {
+    background-color: lightskyblue;
 }
 
-#title{
-  padding-top: 20px;
+.lead {
+    margin-top: -20px;
+    font-size: 36px;
+    color: whitesmoke;
 }
 
-.NavLink{
-  color: whitesmoke;
+#logo img {
+    border-width: 2px;
+    border-color: white;
+    height: 100px;
+    width: auto;
+    object-fit: contain;
 }
 
-@media print { 
-  .noPrint { display: none !important; } 
- }
+#title {
+    padding-top: 20px;
+}
 
- #admin_nav{
-   position: relative;
-   margin-top: 30px;
-   color: white;
-   text-align: center;
- }
+.NavLink {
+    color: whitesmoke;
+}
+
+@media print {
+    .noPrint {
+        visibility: hidden !important;
+        height: 0pt;
+    }
+    #printMe {
+        max-width: 670pt !important;
+        max-height: 300pt !important;
+    }
+}
+
+#admin_nav {
+    position: relative;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}

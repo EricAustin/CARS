@@ -1,46 +1,49 @@
 <div ng-include="'views/partials/nav.html'"></div>
 
-<button class="noPrint" ng-click="ac.printDiv()">Presto Printo</button>
 <div id="printMe" style="width: 75vw; margin:auto; margin-bottom:8vh;">
+      <button class="noPrint" ng-click="ac.printDiv()">Presto Printo</button>
+
 
       <H1>C.A.R.S.</H1>
-   <br>
-   <H2>Service Authorization</H2>
+      <br>
+      <H2>Service Authorization</H2>
 
-   <p>I, {{ac.serviceObject.name}} , hereby authorize C.A.R.S. to perform the following services and repairs
-      on the vehicle listed below:</p>
-   <p>{{ac.serviceObject.service_request}}</p>
+      <p>I, {{ac.serviceObject.name}}, hereby authorize C.A.R.S. to perform the following services and repairs on the vehicle
+            listed below:</p>
+      <p>{{ac.serviceObject.service_requested}}</p>
+      <br><br><br><br><br>
 
-   <p>I understand that the service will be peformed by volunteers who are not professional autmotive techicians. Should I encounter
-      any problems with the service performed by C.A.R.S. I will immediately cease driving the car and contact C.A.R.S. I
-      also agree that I will promptly return the car for examination if I am requested to do so. I understand that I am solely
-      responsible for the safe driving condition of my vehicle at all times. I agree that C.A.R.S. will not be responsible
-      for the failure or breakdown of any components that were not serviced by C.A.R.S. or it's volunteers and that C.A.R.S.
-      and it's colunteers assume no responsibility or liability for the failure or breakdown of any installed part. All part
-      warranties shall be the responsibility of the seller and/or manufacturer of the part if there is a warranty. I waive
-      any and all claims, demands, or lawsuits for myself, my assignees,. and my estate against C.A.R.S., it's volunteers,
-      and/or agents which may arise from vehicle inspection or service performed by the C.A.R.S. Ministry.</p>
-
-
-   <h2>Vehicle Information</h2>
-   {{ac.serviceObject.year}} {{ac.serviceObject.make}} {{ac.serviceObject.model}}
-   <br>VIN: {{ac.serviceObject.vin}}
+      <p>I understand that the service(s) will be performed by volunteers who are not professional automotive technicians. Should
+            I encounter any problems with the service(s) performed by C.A.R.S. I will immediately cease driving the car and
+            contact C.A.R.S. I also agree that I will promptly return the car for examination if I am requested to do so.
+            I understand that I am solely responsible for the safe driving condition of my vehicle at all times. I agree
+            that C.A.R.S. will not be responsible for the failure or breakdown of any components that were not serviced by
+            C.A.R.S. or it's volunteers and that C.A.R.S. and it's volunteers assume no responsibility or liability for the
+            failure or breakdown of any installed part. All part warranties shall be the responsibility of the seller and/or
+            manufacturer of the part if such a warranty exists. I waive any and all claims, demands, or lawsuits for myself,
+            my assignees, and my estate against C.A.R.S., it's volunteers, and/or agents which may arise from vehicle inspection
+            or service performed by the C.A.R.S. Ministry.</p>
 
 
-   <h2>Customer Information</h2>
-   <table style="width:88vw;">
-      <tr>
-         <td>{{ac.serviceObject.name}}</td>
-         <td>cell: {{ac.serviceObject.cellphone}}</td>
-      </tr>
-      <tr>
-         <td> {{ac.serviceObject.address}}</td>
-         <td>alternate: {{ac.serviceObject.alternative_phone}}</td>
-      </tr>
-      <tr>
-         <td>{{ac.serviceObject.city}}, {{ac.serviceObject.state}} {{ac.serviceObject.zip}}</td>
-         <td>email: {{ac.serviceObject.email_address}}</td>
-      </tr>
-   </table>
-   <textarea rows="6" cols="80">Sign and Date</textarea>
+      <h2>Vehicle Information</h2>
+      {{ac.serviceObject.year}} {{ac.serviceObject.make}} {{ac.serviceObject.model}}
+      <br>VIN: {{ac.serviceObject.vin}}
+
+
+      <h2>Customer Information</h2>
+      <table style="width:88vw;">
+            <tr>
+                  <td>{{ac.serviceObject.name}}</td>
+                  <td>cell: {{ac.serviceObject.cellphone}}</td>
+            </tr>
+            <tr>
+                  <td> {{ac.serviceObject.address}}</td>
+                  <td>alternate: {{ac.serviceObject.alternative_phone}}</td>
+            </tr>
+            <tr>
+                  <td>{{ac.serviceObject.city}}, {{ac.serviceObject.state}} {{ac.serviceObject.zip}}</td>
+                  <td>email: {{ac.serviceObject.email_address}}</td>
+            </tr>
+      </table>
+      <textarea rows="6" cols="80">Sign and Date</textarea>
 </div>

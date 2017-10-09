@@ -1,4 +1,6 @@
+
 myApp.controller('ChecklistController', function (ChecklistService, AdminService, $routeParams) {
+
   console.log('ChecklistController created');
   var vm = this;
   vm.AdminService = AdminService;

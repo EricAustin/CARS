@@ -26,7 +26,7 @@
     </md-nav-item>
 
 </md-nav-bar>
-<div class="base" flex="90" flex-offset="5">
+<div flex="90" flex-offset="5">
 
 
     <h2>Request for Vehicle Reapir</h2>
@@ -67,38 +67,32 @@
     <h2>Vehicle Information</h2>
 
     <md-input-container>
-            <div class="container">
-                    <label>VIN</label>
-                    <input type="text" class="form-control" title="VIN must be 17 digits long" pattern="\w{17}" name="VIN" ng-model="rc.customer.vin"
-                    required>
-                    <h4>Where do I find the VIN?</h4>
-                    <img src="./views/images/question_mark.png" alt="question mark" ng-mouseover="openCard = true" ng-mouseleave="openCard = false"> 
-                    
-            <md-card ng-show="openCard">
-                <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-headline">How to find your vehicle's VIN</span>
-                        <span class="md-subhead"> If facing the vehicle, the VIN will be on the dashboard in the lower right-hand corner.  The VIN should also be found on the driver's side door between the door panel and the door frame.</span>
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-md card-media"></div>
-                    </md-card-title-media>
-                </md-card-title>
-                    <md-card-content layout="row" layout-align="space-between">
-                        <div class="md-media-md card-media"> 
-                            <img src="./views/images/VIN_Graphic.png" alt="graphic for VIN location description">
-                        </div>
-                    </md-card-content>
-                </md-card>
-                </div>
-            
         <label>VIN</label>
         <input pattern="\w{17}" name="VIN" ng-model="rc.customer.vin" required>
     </md-input-container>
+
+
     <md-input-container>
         <label>Mileage</label>
         <input ng-model="rc.customer.mileage" required>
     </md-input-container><br>
+    <div layout="row" layout-align="start none" ng-cloak>
+        <md-button class="md-raised md-primary" class="questionMark" ng-click="rc.card()" ng-mouseover="rc.card()" ng-mouseleave="rc.cardClose()">Where do I find the VIN?</md-button><br>
+        <md-card flex="40" id="vinPopUp" ng-show="rc.openCard" ng-cloak>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">How to find your vehicle's VIN</span>
+                    <span class="md-subhead"> If facing the vehicle, the VIN will be on the dashboard in the lower right-hand corner.  The VIN should also be found on the driver's side door between the door panel and the door frame.</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content layout="row" layout-align="space-between">
+                <div class="md-media-md card-media">
+                    <img id="vinSearch" src="./views/images/VIN_Graphic.png" alt="graphic for VIN location description">
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+
     <md-input-container>
         <label>Year</label>
         <input ng-model="rc.customer.year" required>
@@ -115,21 +109,21 @@
         <label>Please describe the problems you are having with your vehicle</label>
         <textarea md-maxlength="600" rows="5" ng-model="rc.customer.problem" required>
     </md-input-container>
-    <md-input-container class="md-block">
-        <label>Please indicate why you qualify to use the services of C.A.R.S. Ministry</label>
+     <label>Please indicate why you qualify to use the services of C.A.R.S. Ministry</label> 
+
 
             <md-radio-group ng-model="rc.customer.qualification">
-             <md-radio-button value="Single Mother" ng-click="rc.closeTextbox()">Single Mother</md-radio-button>
-             <md-radio-button value="Single Woman" ng-click="rc.closeTextbox()"> Single Woman</md-radio-button>
-             <md-radio-button value="Widow" ng-click="rc.closeTextbox()">Widow</md-radio-button>
+                <md-radio-button value="Single Mother" ng-click="rc.closeTextbox()">Single Mother</md-radio-button>
+                <md-radio-button value="Single Woman" ng-click="rc.closeTextbox()"> Single Woman</md-radio-button>    
+             <md-radio-button value="Widow" ng-click="rc.closeTextbox()">Widow</md-radio-button>   
              <md-radio-button value="Financially Limited" ng-click="rc.closeTextbox()">Financially Limited</md-radio-button>
              <md-radio-button value="Other" ng-click="rc.openTextbox()">Other</md-radio-button>
-             <div ng-show="rc.textboxShowing">
+        
+             <!-- <div ng-show="rc.textboxShowing">
                <textarea md-maxlength="600" rows="5" ng-model="rc.customer.qualification" placeholder="Please explain your circumstances:"></textarea>
-               </div>
-            </md-radio-group>
-    </md-input-container>
+</div> 
+</md-radio-group>
+</div>
 
-    <md-button class="md-button primary" class="btn-btn-primary" type="submit" ng-click="rc.addCustomer()">Submit Request</md-button>
->>>>>>> master
+<md-button class="md-button primary" class="btn-btn-primary" type="submit" ng-click="rc.addCustomer()">Submit Request</md-button>
 </div>

@@ -28,6 +28,16 @@ myApp.controller('RequestController', function (AdminService, RequestService, $l
   vm.closeTextbox = function() {
     vm.textboxShowing = false;
   };
+
+
+  vm.card = function() {
+    vm.openCard = true;
+  };
+
+  vm.cardClose = function () {
+    vm.openCard = false;
+  };
+
 });
 
 

@@ -9,13 +9,15 @@ body {
 
 main{
    background-color: #999696;
-   background-image: url("../views/images/car-repair-background.jpg");
+   background-image: 
+   linear-gradient(rgba(0,0,0,0.9), rgba(255,255,255,0.6)),
+    url("../views/images/car-repair-background.jpg");
   background-attachment: fixed; 
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  opacity: 1;
-    height: 100vh;
+  height: 100vh;
 }
+
 
 .carsImg {
     width: 300px;
@@ -452,7 +454,7 @@ footer {
 }
 
 .base{
-    background-color: #DBD7D7;
+    background-color: #E9E9E9;
     overflow-y: scroll;
     height: 90vh;
 }
@@ -468,3 +470,21 @@ footer {
 .serviced {
     background-color: lightskyblue;
 }
+
+.questionMark{
+    font-size: 24px;
+    padding-bottom: 12px;
+    display: inline;
+}
+
+#vinSearch{
+    height: 65%;
+    width: auto;
+    padding-top: 8%;
+}
+
+#vinPopUp{
+    width: 40%;
+    height: 250px;
+    }
+

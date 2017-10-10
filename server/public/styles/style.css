@@ -267,6 +267,13 @@ main {
     }
 }
 
+/* #authInput {
+    min-width: 90px!important;
+    max-width: 99.99%!important;
+    transition: width 0.25s;
+    text-align: center;
+} */
+
 #admin_nav {
     position: relative;
     margin-top: 30px;

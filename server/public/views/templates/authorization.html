@@ -1,23 +1,28 @@
 <div ng-include="'views/partials/nav.html'"></div>
 
+
 <div flex="90" flex-offset="5" class="base">
       <div id="printMe">
-            <md-button flex class="md-raised md-primary noPrint" ng-click="ac.printDiv()">Print</md-button>
-            <md-button flex class="md-raised md-warn removebutton noPrint" ng-click="ac.updateCustomer(data.customer_id, 'printed')">remove</md-button>
-            <br>
+            <md-action>
+                  <md-button flex class="md-raised md-primary noPrint" ng-click="ac.printDiv()">Print</md-button>
+                  <md-button flex class="md-raised md-warn removebutton noPrint" ng-click="ac.updateCustomer(data.customer_id, 'printed')">remove</md-button>
+                  <br>
+            </md-action>
 
 
             <h2 class="authClickToEdit" id="authDate">{{ac.date | date:MMM/dd/yyyy}}</h2>
             <H1>C.A.R.S.</H1>
-            <H2>Service Authorization</H2><img src="../views/images/cars-logo-transparent.png" id="authCarsLogo" />
-            <!-- <img src="../views/images/cars-logo-transparent.png" id="authCarsLogo" /> -->
+            <H2>Service Authorization</H2>
+            <img src="../views/images/cars-logo-transparent.png" id="authCarsLogo" />
 
-            <p>I, {{ac.serviceObject.name}}, hereby authorize C.A.R.S. to perform the following services and repairs on the
-                  vehicle listed below:</p>
-            <p>{{ac.serviceObject.service_requested}}</p>
-            <br>
-            <br>
-            <br>
+            <p>I,
+                  <input type="text" onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" id="authName" style="border:none;background:transparent;"
+                        ng-model="ac.serviceObject.name"> hereby authorize C.A.R.S. to perform the following services and repairs on the vehicle listed below:</p>
+            <p>
+                  <input type="text" onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" id="authSR" style="border:none;background:transparent;"
+                        ng-model="ac.serviceObject.service_requested">
+            </p>
+
             <br>
 
             <p>I understand that the service(s) will be performed by volunteers who are not professional automotive technicians.
@@ -33,28 +38,48 @@
 
 
             <h2>Vehicle Information</h2>
-            {{ac.serviceObject.year}} {{ac.serviceObject.make}} {{ac.serviceObject.model}}
-            <br> {miles here} miles
-            <br>VIN: {{ac.serviceObject.vin}}
+            <input type="text" style="border:none;background:transparent;width:40px;" ng-model="ac.serviceObject.year">
+            <input type="text" style="border:none;background:transparent;width:80px;" ng-model="ac.serviceObject.make">
+            <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.model">
+
+            <br>Miles:
+            <input type="text" style="border:none;background:transparent;width:80px;" ng-model="ac.checklistObject[0].current_mileage">
+
+            <br>VIN:
+            <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.vin">
 
 
             <h2>Customer Information</h2>
             <table style="width:88vw;">
                   <tr>
-                        <td>{{ac.serviceObject.name}}</td>
-                        <td>cell: {{ac.serviceObject.cellphone}}</td>
+                        <td>
+                              <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.name">
+                        </td>
+                        <td>cell:
+                              <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.cellphone">
+                        </td>
                   </tr>
                   <tr>
-                        <td> {{ac.serviceObject.address}}</td>
-                        <td>alternate: {{ac.serviceObject.alternative_phone}}</td>
+                        <td>
+                              <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.address">
+                        </td>
+                        <td>alternate:
+                              <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.alternative_phone">
+                        </td>
                   </tr>
                   <tr>
-                        <td>{{ac.serviceObject.city}}, {{ac.serviceObject.state}} {{ac.serviceObject.zip}}</td>
-                        <td>email: {{ac.serviceObject.email_address}}</td>
+                        <td>
+                              <input type="text" style="border:none;background:transparent;width:100px;" ng-model="ac.serviceObject.city">
+                              <input type="text" style="border:none;background:transparent;width:40px;" ng-model="ac.serviceObject.state">
+                              <input type="text" style="border:none;background:transparent;width:60px;" ng-model="ac.serviceObject.zip">
+                        </td>
+                        <td>email:
+                              <input type="text" style="border:none;background:transparent;width:150px;" ng-model="ac.serviceObject.email_address">
+                        </td>
                   </tr>
             </table>
             <br>
-            <H3>I have read, understand, and agree to the above and authorize C.A.R.S. to inspect and repair my vehicle.</H3>
+            <H3>I have read, understand, and agree to the above and authorise C.A.R.S. to inspect and repair my vehicle.</H3>
             <br>
             <textarea rows="6" cols="80">Sign and Date</textarea>
       </div>

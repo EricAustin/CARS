@@ -1,7 +1,5 @@
-<md-nav-bar class="navBarStyle" 
- md-selected-nav-item="currentNavItem" layout="row"
- layout-align="space-around center" 
- md-no-ink-bar="disableInkBar"  nav-bar-aria-label="navigation links">
+<md-nav-bar class="navBarStyle" md-selected-nav-item="currentNavItem" layout="row" layout-align="space-around center" md-no-ink-bar="disableInkBar"
+  nav-bar-aria-label="navigation links">
 
   <span ng-if="cc.AdminService.userObject.role == 'mechanic'">
       <md-nav-item flex md-nav-href="#/mechanic" name="mechanic view">Mechanic View</md-nav-item>
@@ -17,6 +15,12 @@
 
 <md-card>
   <h4>Vehicle Inspection Checklist</h4>
+  <br>
+  <md-input-container>
+    <label for="text"> Mechanics:  &#42;&#42; </label>
+    <input type='text' ng-model="cc.cars_checklist.info.mechanics" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.mechanics)">
+  </md-input-container>
+
 
   <form class="">
     <div class="container">
@@ -27,15 +31,18 @@
           <label for="text"> Vehicle Owner's Name &#42;&#42; </label>
           <input type='text' ng-model="cc.cars_checklist.info.name" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.name)">
         </md-input-container>
-        <md-input-container> <label for="text"> VIN &#42;&#42; </label>
+
+        <br>
+
+        <md-input-container>
+          <label for="text"> VIN &#42;&#42; </label>
           <input type='text' ng-model="cc.cars_checklist.info.vin" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.vin)">
         </md-input-container>
+
         <md-input-container>
           <label for="text">Year &#42;&#42; </label>
-          <input type='text' ng-model="cc.cars_checklist.info.year" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.year)">          </md-input-container>
-
-        <md-input-container> <label for="text"> Engine Size &#42;&#42; </label>
-          <input type='text'> </md-input-container>
+          <input type='text' ng-model="cc.cars_checklist.info.year" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.year)">
+        </md-input-container>
 
         <md-input-container>
           <label for="text">Make &#42;&#42; </label>
@@ -44,7 +51,16 @@
 
         <md-input-container>
           <label for="text">Model &#42;&#42; </label>
-          <input type='text' ng-model="cc.cars_checklist.info.model" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.model)">          </md-input-container>
+          <input type='text' ng-model="cc.cars_checklist.info.model" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.model)">
+        </md-input-container>
+
+        <br>
+
+        <md-input-container>
+          <label for="text"> Engine Size &#42;&#42; </label>
+          <input type="text" ng-model="cc.cars_checklist.info.engine_size" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.year)">
+        </md-input-container>
+
         <md-input-container>
           <label for="text">Miles &#42;&#42; </label>
           <input type='text' ng-model="cc.cars_checklist.info.current_mileage" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.current_mileage)">
@@ -551,16 +567,79 @@
           <input type="text" ng-model="cc.cars_checklist.info.oiltype" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.oiltype)">
         </md-input-container>
       </div>
-
+      <br>
       <!--Finish Up Checklist begins here-->
-      <div ng-if="cc.cars_checklist.info.checklist_status === 'serviced'">
+      <div ng-show="cc.cars_checklist.info.checklist_status === 'serviced'">
+
         <h3>Finish Up Checklist</h3>
-        <div>
-          <md-radio-group ng-model="cc.cars_checklist.info.oilcapsecure">
-            <label for="text">1. Oil Cap Secure</label>
-            <md-radio-button value="true"></md-radio-button>
-          </md-radio-group>
-        </div>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <md-checkbox ng-model="cc.cars_checklist.info.checkoil_plug" ng-change="cc.saveChecklistItem(cc.cars_checklist.info.checkoil_plug)"
+          ng-checked="cc.cars_checklist.info.checkoil_plug">
+          7.Check Oil Plug for Leaks
+        </md-checkbox>
+
+        <br>
+
+        <!-- <md-radio-group ng-model="cc.cars_checklist.info.oilcapsecure">
+          <label for="text">1. Oil Cap Secure</label>
+          <md-radio-button value="true"></md-radio-button>
+        </md-radio-group>
+
 
         <div>
           <md-radio-group ng-model="cc.cars_checklist.info.oilsticksecure">
@@ -637,7 +716,7 @@
             <label for="text">12. Review Checklist with Guest</label>
             <md-radio-button value="true"></md-radio-button>
           </md-radio-group>
-        </div>
+        </div> -->
       </div>
       <!--Finish Up Checklist ends here-->
 
